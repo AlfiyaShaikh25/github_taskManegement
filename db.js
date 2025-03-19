@@ -25,21 +25,22 @@
 //     });
 
 // module.exports = pool;
-import { config } from "./env.js";
-
-const mysql = require("mysql");
+import mysql from 'mysql2';
 
 const connection = mysql.createConnection({
-  host: config.DB_HOST,
-  user: config.DB_USER,
-  password: config.DB_PASSWORD,
-  database: config.DB_NAME,
+  host: process.env.MYSQL_ADDON_HOST,
+  user: process.env.MYSQL_ADDON_USER,
+  password: process.env.MYSQL_ADDON_PASSWORD,
+  database: process.env.MYSQL_ADDON_DB,
+  port: process.env.MYSQL_ADDON_PORT
 });
 
-connection.connect((err) => {
+connection.connect(err => {
   if (err) {
-    console.error("Database connection failed:", err);
-    return;
+    console.error('Database connection failed:', err);
+  } else {
+    console.log('Connected to MySQL Database!');
   }
-  console.log("Connected to MySQL database!");
 });
+
+export default connection;
