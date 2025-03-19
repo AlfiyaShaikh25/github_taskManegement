@@ -16,7 +16,9 @@ app.use('/api/task', taskRoutes);
         console.log('✅ Database is connected and ready');
         connection.release(); // Release connection back to the pool
 
-        app.listen(5000, () => console.log('🚀 Server started on port 5000'));
+        const PORT = process.env.PORT || 5000;
+        app.listen(PORT, () => console.log(`🚀 Server started on port ${PORT}`));
+        
     } catch (error) {
         console.error('❌ Database connection failed:', error);
         process.exit(1); // Stop the app if DB connection fails
