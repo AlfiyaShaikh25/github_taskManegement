@@ -1,5 +1,8 @@
 const mysql = require('mysql2/promise');
-
+console.log("📌 DATABASE_HOST:", process.env.DATABASE_HOST);
+console.log("📌 DATABASE_NAME:", process.env.DATABASE_NAME);
+console.log("📌 DATABASE_USER:", process.env.DATABASE_USER);
+console.log("📌 DATABASE_PORT:", process.env.DATABASE_PORT || 3306);
 const pool = mysql.createPool({
     host: process.env.DATABASE_HOST,  // Clever Cloud MySQL host
     user: process.env.DATABASE_USER,  // Clever Cloud MySQL user
