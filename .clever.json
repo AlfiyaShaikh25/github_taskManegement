@@ -7,6 +7,14 @@
       "git_ssh_url": "git+ssh://git@push-n3-par-clevercloud-customers.services.clever-cloud.com/app_07ff7103-21f4-4ad2-a46a-b77f244de033.git",
       "name": "my-task-app",
       "alias": "my-task-app"
+    },
+    {
+      "app_id": "app_26a04621-7c3b-4195-baf7-5ab7b4126e90",
+      "org_id": "user_96cd5540-3691-4e76-bfc2-b2bd8d52d58f",
+      "deploy_url": "https://github.com/AlfiyaShaikh25/github_taskManegement.git",
+      "git_ssh_url": "https://github.com/AlfiyaShaikh25/github_taskManegement.git",
+      "name": "github_taskManegement",
+      "alias": "github_taskManegement"
     }
   ]
 }
