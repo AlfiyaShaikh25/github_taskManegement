@@ -2,17 +2,15 @@ function submitForm(event) {
     event.preventDefault(); // Prevent form from refreshing
 
     const taskData = {
-
         taskOwner: document.getElementById("taskOwner").value,
         taskName: document.getElementById("taskName").value,
         description: document.getElementById("description").value,
         startDate: document.getElementById("startDate").value,
         dueDate: document.getElementById("dueDate").value,
-        
         priority: document.getElementById("priority").value,
-        taskId: document.getElementById("taskId").value,
         status: document.getElementById("status").value
     };
+    
 
     fetch("http://localhost:5000/api/task", { 
         method: "POST",
